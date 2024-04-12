@@ -35,3 +35,66 @@
   top: 10em;
   left: 8em;
 }
+
+.project {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-auto-flow: row;
+}
+
+.project img {
+  height: 10em;
+  width: 10em;
+}
+
+.project-details {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-areas:
+    "H A B"
+    "P P P";
+}
+.project-details p {
+  grid-area: P;
+}
+
+.project-details a:nth-child(1) {
+  grid-area: A;
+}
+
+.project-details a:nth-child(2) {
+  grid-area: B;
+}
+
+.project-details h1 {
+  grid-area: H;
+}
+
+.project-details a {
+  height: 1em;
+  width: 1em;
+}
+
+.portfolio {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: 1fr auto;
+}
+
+.contact > img {
+  height: 30vw;
+  width: 30vw;
+}
+
+.contact-wrapper {
+  display: grid;
+}
+
+.social {
+  display: grid;
+  grid-auto-flow: column;
+}
