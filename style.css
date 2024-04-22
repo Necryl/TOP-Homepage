@@ -1,9 +1,3 @@
-.contact img {
-  object-fit: cover;
-  height: 10em;
-  width: 10em;
-}
-
 :root * {
   font-family: "Roboto", sans-serif;
   font-style: normal;
@@ -25,7 +19,6 @@
 }
 
 .about img {
-  opacity: 0%;
   object-fit: cover;
   height: 20vw;
   width: 20vw;
@@ -97,6 +90,8 @@
 .contact {
   display: grid;
   grid-template-columns: 1fr auto;
+  padding: 8px;
+  gap: 1em;
 }
 
 .contact > img {
@@ -106,6 +101,12 @@
 
 .contact-wrapper {
   display: grid;
+  /* border: 2px solid red; */
+  gap: 1em;
+}
+.contact-wrapper p {
+  padding: 0%;
+  margin: 0%;
 }
 
 .social {
@@ -124,6 +125,15 @@
   width: var(--size) !important;
 }
 
-.phone,
-.email {
+.phone img,
+.email img {
+  object-fit: contain;
+  width: 1.7em;
+  height: auto;
+}
+
+.contact-wrapper div {
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }
