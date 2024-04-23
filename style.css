@@ -5,12 +5,13 @@
 
 .about {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: auto 1fr;
+  align-items: center;
 }
 
 .about-wrapper {
   box-shadow: 0em 0em 0.5em;
-  padding: 2em 2em 2em 10em;
+  padding: 2em 2em 2em 2em;
   margin: 3em 3em;
 }
 
@@ -19,14 +20,11 @@
 }
 
 .about img {
-  object-fit: cover;
-  height: 20vw;
-  width: 20vw;
-
   position: relative;
-  scale: 250%;
-  top: 10em;
-  left: 8em;
+
+  object-fit: cover;
+  width: 50vw;
+  height: 100%;
 }
 
 .project {
@@ -89,20 +87,23 @@
 
 .contact {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-columns: auto 1fr;
   padding: 8px;
   gap: 1em;
 }
 
 .contact > img {
-  height: 30vw;
-  width: 30vw;
+  object-fit: cover;
+  object-position: center;
+  height: 20em;
+  width: 100%;
 }
 
 .contact-wrapper {
   display: grid;
   /* border: 2px solid red; */
   gap: 1em;
+  grid-template-rows: auto auto auto auto auto 1fr;
 }
 .contact-wrapper p {
   padding: 0%;
