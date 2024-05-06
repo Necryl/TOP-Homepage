@@ -2,6 +2,17 @@
   font-family: "Roboto", sans-serif;
   font-style: normal;
 }
+body {
+  display: grid;
+  justify-content: center;
+}
+
+#app {
+  padding: 3em;
+  /* outline: 1em solid red; */
+  display: grid;
+  max-width: 1300px;
+}
 
 .about {
   display: grid;
@@ -12,7 +23,9 @@
 .about-wrapper {
   box-shadow: 0em 0em 0.5em;
   padding: 2em 2em 2em 2em;
-  margin: 3em 3em;
+  margin: 3em 3em 3em 0em;
+  display: grid;
+  font-size: 1.3em;
 }
 
 .about-wrapper h1 {
@@ -23,8 +36,10 @@
   position: relative;
 
   object-fit: cover;
-  width: 50vw;
-  height: 100%;
+  width: var(--aboutimgsize);
+  aspect-ratio: 1/1;
+
+  --aboutimgsize: 450px;
 }
 
 .project {
@@ -88,22 +103,26 @@
 .contact {
   display: grid;
   grid-template-columns: auto 1fr;
-  padding: 8px;
   gap: 1em;
+  padding: 3em;
+  font-size: 1.2em;
+  align-content: center;
 }
 
 .contact > img {
   object-fit: cover;
   object-position: center;
-  height: 20em;
-  width: 100%;
+  height: 425px;
+  width: 500px;
+  justify-self: end;
 }
 
 .contact-wrapper {
   display: grid;
   /* border: 2px solid red; */
   gap: 1em;
-  grid-template-rows: auto auto auto auto auto 1fr;
+  grid-template-rows: auto auto auto auto auto auto;
+  align-content: center;
 }
 .contact-wrapper p {
   padding: 0%;
@@ -117,7 +136,8 @@
   gap: 1em;
 }
 
-.about .social {
+.about-wrapper .social {
+  justify-self: end;
 }
 
 .open-in-new {
