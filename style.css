@@ -127,7 +127,7 @@ body {
 
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 3em;
 }
 
@@ -190,8 +190,41 @@ body {
   gap: 1em;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
   #app {
     display: grid;
+  }
+
+  .about {
+    box-sizing: border-box;
+    /* outline: 3px solid red; */
+    height: 400px;
+    margin: 0%;
+    grid-template-columns: 1fr;
+  }
+
+  .about-wrapper {
+    position: absolute;
+    z-index: 1;
+    margin: 3em 0em 3em 0em;
+  }
+
+  .about-wrapper * {
+    min-width: none;
+  }
+
+  .mainImage {
+    position: absolute;
+    z-index: 2;
+    /* opacity: 0; */
+  }
+
+  .contact {
+    grid-template-columns: 1fr;
+  }
+
+  .contact > img {
+    height: 600px;
+    width: 100%;
   }
 }
