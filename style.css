@@ -20,6 +20,7 @@ body {
   grid-template-columns: auto 1fr;
   align-items: center;
   position: relative;
+  --aboutimgsize: 450px;
 }
 .about::before {
   background-color: rgb(11, 152, 187);
@@ -48,16 +49,16 @@ body {
 
 .mainImage {
   position: relative;
+  max-width: 40vw;
 }
 
 .about img {
   position: relative;
 
   object-fit: cover;
+  max-width: 40vw;
   width: var(--aboutimgsize);
   aspect-ratio: 1/1;
-
-  --aboutimgsize: 450px;
 }
 
 #titleName {
@@ -198,7 +199,6 @@ body {
   .about {
     box-sizing: border-box;
     /* outline: 3px solid red; */
-    height: 400px;
     margin: 0%;
     grid-template-columns: 1fr;
   }
@@ -206,7 +206,7 @@ body {
   .about-wrapper {
     position: absolute;
     z-index: 1;
-    margin: 3em 0em 3em 0em;
+    margin: var(--aboutimgsize) 0em 3em 0em;
   }
 
   .about-wrapper * {
@@ -217,8 +217,16 @@ body {
     position: absolute;
     z-index: 2;
     /* opacity: 0; */
+    left: -7%;
   }
 
+  #titleName {
+    position: absolute;
+    bottom: 0%;
+    top: 7%;
+    width: max-content;
+    left: 85%;
+  }
   .contact {
     grid-template-columns: 1fr;
   }
